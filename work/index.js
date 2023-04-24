@@ -24,7 +24,7 @@ const B = {
     x: Math.cos(theta) * c,
     y: Math.sin(theta) * c
 };
-const C = { x: B, y: 0 };
+const C = { x: B.x, y: 0 };
 
 ctx.translate(offset.x, offset.y);
 chartCtx.translate(chartOffset.x, chartOffset.y);
@@ -33,7 +33,7 @@ drawCoordinateSystem(chartCtx, chartOffset);
 
 update(ctx);
 document.onwheel = (event) => {
-    theta += toRad(Math.sign(event.deltaY));
+    theta -= toRad(Math.sign(event.deltaY));
 
     B.x = Math.cos(theta) * c;
     B.y = Math.sin(theta) * c;
@@ -116,7 +116,7 @@ function update(ctx) {
     ctx.beginPath();
     ctx.strokeStyle = "black";
     ctx.lineWidth = 1;
-    ctx.arc(0, 0, c, 0, theta);
+    ctx.arc(0, 0, c, 0, theta,false);
     ctx.stroke();
 
     const chartScaler = chartOffset.y * 0.2;

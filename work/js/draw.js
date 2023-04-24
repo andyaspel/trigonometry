@@ -3,7 +3,7 @@
 export function drawPoint(loc, size = 1, color = "black",chartCtx) {
     chartCtx.beginPath();
     chartCtx.fillStyle = color;
-    chartCtx.arc(loc.x, loc.y, size / 2, 0, Math.PI*2 );
+    chartCtx.arc(loc.x, loc.y, size / 2, 0, Math.PI*2,true );
     chartCtx.fill();
 }
 // example drawLine({x:0,y:0}, {x:1, y"-1}, "blue");
