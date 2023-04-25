@@ -29,8 +29,7 @@ header ul {
     align-items: center;
     box-shadow: 1px -2px 5px 1px wheat;
     padding: 0.5em 1em;
-    /* align-self: flex-end; */
-}
+background: rgba(103, 104, 105, 0.121);}
 li {
     list-style: none;
     /* padding: 0.5em; */
@@ -39,11 +38,12 @@ a {
     text-decoration: none;
     color: wheat;
     text-transform: capitalize;
-    border: solid 1px hwb(36 80% 0% / 0.561);
-    padding: 0.2em;
+    border: solid 1px #ecede88b;
+    padding: 0.2em 0.4em;
     font-size: 1.5rem;
     font-style: italic;
     font-weight: 600;
+    background:hwb(78 45% 44% / 0.266) ;
 }
 canvas{
     padding: 0;
